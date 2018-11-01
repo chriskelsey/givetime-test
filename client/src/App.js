@@ -8,6 +8,8 @@ import FullScreenHero from './components/FullScreenHero';
 import EventFeedPage from './components/Feed';
 import GenericEventFeedPage from './components/Feed/GenericEventFeedPage';
 import CharityEvent from './components/SignInPage/CharityEventPage';
+import EventSignUp from './components/Feed/EventSignUp';
+import ThankYou from './components/Feed/ThankYou'
 import InterestSelectionHero from './components/SignInPage/SignUpHero/InterestSelectionHero';
 import NoMatch from './components/Nav/NoMatch';
 
@@ -44,6 +46,8 @@ class App extends Component {
             <Route  exact path="/anoneventfeed" component={GenericEventFeedPage} />
             <Route  exact path="/charityevent" component={CharityEvent} />
             {/* <Route  exact path="/interests" component={InterestSelectionHero} /> */}
+            <Route  exact path="/eventsignup" component={EventSignUp} />
+            <Route  exact path="/thankyou" component={ThankYou} />
             <Route component={NoMatch} />
 
 
