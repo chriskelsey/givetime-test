@@ -8,9 +8,10 @@ class CreateEvent extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      title: "",
+      name: "",
       date: "",
-      summary: ""
+      cityAddress:"",
+      synopsis: ""
 
     }
   };
@@ -26,21 +27,22 @@ class CreateEvent extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (!this.state.title) {
+    if (!this.state.name) {
       alert("Enter a title please!")
     } else if (!this.state.date) {
       alert(
         'Please provide a date.'
       );
-    } else if (!this.state.summary) {
+    } else if (!this.state.synopsis) {
       alert(
         'Please provide a summary for your event.'
       );
     } else {
       API.newEvent({
-        title: this.state.title,
+        name: this.state.name,
         date: this.state.date,
-        summary: this.state.summary
+        synopsis: this.state.synopsis,
+        cityAddress: this.state.cityAddress
       })
         .then(res => console.log(res.data))
         .catch(err => console.log(err));
@@ -69,13 +71,13 @@ class CreateEvent extends Component {
                             <input
                               //  onChange={props.handleInputChange}
                               //  value="username"
-                              value={this.state.title}
-                              name="title"
+                              value={this.state.name}
+                              name="name"
                               onChange={this.handleInputChange}
                               type="text"
                               className="form-control"
-                              placeholder="Event Title"
-                              id="title" />
+                              placeholder="Event Name"
+                              id="name" />
 
                             <input
                               //  onChange={props.handleInputChange}
@@ -88,21 +90,32 @@ class CreateEvent extends Component {
                               placeholder="Event Date"
                               id="date" />
 
+                            <input
+                              //  onChange={props.handleInputChange}
+                              //  value="username"
+                              value={this.state.cityAddress}
+                              name="cityAddress"
+                              onChange={this.handleInputChange}
+                              type="text"
+                              className="form-control"
+                              placeholder="Location"
+                              id="cityAddress" />
+
                             <label className="event_sm_title">Please Describe the Event</label>
                             <textarea
-                              value={this.state.summary}
+                              value={this.state.synopsis}
                               onChange={this.handleInputChange}
                               className="form-control"
-                              name="summary"
-                              id="summary"
+                              name="synopsis"
+                              id="synopsis"
                               cols="30"
-                              rows="4">
+                              rows="1">
                             </textarea>
 
                           </div>
 
                           <div className="text-center">
-                            <button className="button radius signupBtn" onClick={this.handleFormSubmit}>Sumbit</button>
+                            <button className="button radius signupBtn" onClick={this.handleFormSubmit}>Submit</button>
                           </div>
 
                         </form>
