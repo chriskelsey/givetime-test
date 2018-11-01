@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import NavSideBar from "../Nav"
 import FeedListItem from "./FeedListItem.js";
+import FeedList from "./FeedList.js";
 import "./EventFeedPage.css";
 import MyEvent from '../MyEvents/MyEvent';
 import Footer from '../Nav/Footer';
@@ -9,10 +10,15 @@ import API from "../../utils/API";
 class EventFeedPage extends Component {
     state = {
         show: false,
-        profile: {}   
+        profile: {},
+        events: []  
     }
 
     componentDidMount() {
+        API.getEvents().then(event =>{
+                this.setState({ events: event.data });
+        });
+
         API.getUserData()
             .then(profile =>{
                 this.setState({ profile: profile.data });
@@ -41,7 +47,18 @@ class EventFeedPage extends Component {
         <div className = "content">
             <div className= "blank "></div>
             <h2>Event Feed</h2>
-            <FeedListItem />
+            <FeedList>
+            {this.state.events.map( event => {
+                    return (
+                      <FeedListItem
+                        key={event.name}
+                        name={event.name}
+                        synopsis={event.synopsis}
+                        //ingredients={recipe.ingredients}
+                      />
+                    );
+                  })}
+            </FeedList>
         </div>
         </div>
         

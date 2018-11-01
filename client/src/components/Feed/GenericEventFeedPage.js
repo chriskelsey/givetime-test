@@ -1,11 +1,21 @@
 import React, {Component} from "react";
 import FeedListItem from "./FeedListItem.js";
+import FeedList from"./FeedList.js";
 import { Link } from 'react-router-dom';
 import "./GenericEventFeedPage.css";
 import Footer from '../Nav/Footer';
 import API from "../../utils/API";
 
 class GenericEventFeedPage extends Component {
+    state = {
+        events: []  
+    }
+
+    componentDidMount() {
+        API.getEvents().then(event =>{
+                this.setState({ events: event.data });
+        });
+    }
     render () {
         return (
             
@@ -21,10 +31,21 @@ class GenericEventFeedPage extends Component {
     </div>
   </div>
         <div>
-        <div className = "content">
+        <div className = "anon-content content">
             <div className= "blank "></div>
             <h2>Latest Events</h2>
-            <FeedListItem />
+            <FeedList>
+            {this.state.events.map( event => {
+                    return (
+                      <FeedListItem
+                        key={event.name}
+                        name={event.name}
+                        synopsis={event.synopsis}
+                        //ingredients={recipe.ingredients}
+                      />
+                    );
+                  })}
+            </FeedList>
         </div>
         </div>
         
