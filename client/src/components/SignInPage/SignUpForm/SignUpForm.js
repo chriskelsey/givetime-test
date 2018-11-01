@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
 import FormBack from "./../FormBack";
 import "./SignUpForm.css";
 import "../../Button/Button-2.css";
@@ -13,9 +14,23 @@ class SignUpForm extends Component {
       firstName: "",
       lastName: "",
       email: "",
-      phoneNumber: ""
+      phoneNumber: "",
+      redirect: false
     }
   }
+
+  setRedirect = () => {
+    this.setState({
+      redirect:true
+    })
+  }
+
+  renderRedirect = () => {
+    if (this.state.redirect) {
+      return <Redirect to='/eventfeed' />
+    }
+  }
+
 
   handleInputChange = event => {
     let value = event.target.value;
@@ -56,7 +71,7 @@ class SignUpForm extends Component {
         phoneNumber: this.state.phoneNumber,
         username: this.state.username
       })
-        .then(res => console.log(res.data))
+        .then(this.setRedirect)
         .catch(err => console.log(err));
     }
 
@@ -145,6 +160,8 @@ class SignUpForm extends Component {
           id="phoneNumber" />
 
         </div>
+
+        {this.renderRedirect()}
         
         <div className= "text-center">
           <button className ="button radius signupBtn" onClick={this.handleFormSubmit}>Next</button>
