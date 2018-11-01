@@ -1,0 +1,45 @@
+h2 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+h3 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.content {
+    margin-left: 5% !important;
+}
+
+.callout {
+    width: 90%;
+    margin-bottom: 40px;
+}
+
+.blank {
+    height: 20px;
+}
+
+footer {
+    margin-left: 0 !important;
+}
+
+.top-content-section {
+  padding: 0  0 1rem 0;
+}
+
+.top-content-section svg {
+  height: 3.75rem;
+  width: 3.75rem;
+  -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.top-bar {
+  background: none;
+}
+
+
+
