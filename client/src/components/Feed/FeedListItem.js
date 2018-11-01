@@ -1,6 +1,10 @@
 import React from "react";
 import "./Feed.css";
 import "../Button/Button-2.css";
+import API from "../../utils/API";
+
+API.getEvents().then(event =>{console.log(event.data);});
+   
 
 const FeedListItem = props => (
     <div className = "callout clearfix horizontal-center">

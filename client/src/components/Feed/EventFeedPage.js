@@ -6,8 +6,6 @@ import MyEvent from '../MyEvents/MyEvent';
 import Footer from '../Nav/Footer';
 import API from "../../utils/API";
 
-
-
 class EventFeedPage extends Component {
     state = {
         show: false,
@@ -17,7 +15,6 @@ class EventFeedPage extends Component {
     componentDidMount() {
         API.getUserData()
             .then(profile =>{
-                console.log(profile.data);
                 this.setState({ profile: profile.data });
             }).catch(err => console.log(err));
     }

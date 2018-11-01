@@ -6,10 +6,10 @@ import Button from '@material-ui/core/Button';
 const NavSideBar = (props) => (
     <div className = "sideNav">
     <img src="http://www.rsa.neu.edu/wp-content/uploads/blank-profile-picture.png"/>
-    <h3>Name</h3>
+    <h3>Chris</h3>
     {/* <a className= "sideNavItem" href = "#">Profile</a>
     <a className= "sideNavItem" href = "#">Events</a>
-    <a className= "sideNavItem" href = "#">Sign Out</a> */}
+    <a className= "sideNavItem" href = "/signin">Sign Out</a> */}
     <Button className="sideNavItem" color="inherit">Profile</Button>
     <Button className="sideNavItem" color="inherit">Find Events in My Area</Button>
 
