@@ -1,4 +1,3 @@
-no
 body {
     padding:0;
     margin:0;
@@ -9,8 +8,10 @@ body {
 
 .bck_black {
     background: #3c3c3c;
-    height: 450px;
-    overflow-y: scroll;
+    height: 500px;
+    position:fixed;
+    bottom:100px;
+    width:100%;
 }
 .footer_bck_black {
     background: #3c3c3c;
