@@ -31,9 +31,8 @@ class EventFeedPage extends Component {
         } else {
             this.setState({show:true})
         }
-        
-    
     }
+    
     render () {
         return (
             
@@ -50,12 +49,14 @@ class EventFeedPage extends Component {
             <FeedList>
             {this.state.events.map( event => {
                     return (
+                        this.formatDate,
                       <FeedListItem
                         key={event.name}
                         name={event.name}
                         synopsis={event.synopsis}
                         date={event.date}
                       />
+                      
                     );
                   })}
             </FeedList>
