@@ -9,7 +9,7 @@ const eventSeed = [
   {
     name: "Puppy Car Wash",
     synopsis: "Wash Cars, Pet puppies, help charity, what more do you want?",
-    date: new Date('November 17, 2018'),
+    date: new Date(Date.now()),
     cityAddress: "2926 16th St. San Francisco CA 94103"
   },
   {
