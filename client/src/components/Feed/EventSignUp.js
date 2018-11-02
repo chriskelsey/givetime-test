@@ -44,10 +44,10 @@ class EventSignUp extends Component {
 
         <div className = "text-center">
             <h1 style = {{color: 'black', marginLeft:"100px", fontSize: "40px"}}> Puppy Car Wash </h1>
-            <h3 style = {{color: 'black', size: '5px', marginLeft: "80px"}}> 555 Main Street, San Francisco, CA</h3>
+            <h3 style = {{color: 'black', size: '5px', marginLeft: "80px"}}> 2926 16th St. San Francisco CA 94103</h3>
 
             <div className = "text-center">
-                <fieldset style={{width: "800px", marginLeft: "295px"}}className="fieldset">
+                <fieldset style={{width: "800px", margin: "1.125rem 30% 1.125rem 25%"}}className="fieldset">
                 <legend>Times Available</legend>
                 <input id="checkbox1" type="checkbox" /><label for="checkbox1">9:00AM</label>
                 <input id="checkbox2" type="checkbox" /><label for="checkbox2">12:00PM</label>
@@ -63,7 +63,7 @@ class EventSignUp extends Component {
 
             <div className = "text-center">
 
-                <Link to ="/thankyou" style ={{marginLeft: "90px"}}  className="button radius">Submit</Link>
+                <Link to ="/thankyou" style={{marginLeft: "60px"}}  className="button radius">Submit</Link>
 
             </div>
         </div>
