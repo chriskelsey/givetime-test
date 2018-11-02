@@ -14,7 +14,7 @@ const NavSideBar = (props) => (
     <Button className="sideNavItem" color="inherit">Find Events in My Area</Button>
 
     <Button className="sideNavItem" color="inherit" onClick={props.toggle}>My Events</Button>
-    <Button className="sideNavItem" color="inherit">Sign Out</Button>
+    <Button className="sideNavItem" color="inherit" href="/">Sign Out</Button>
 
     
     

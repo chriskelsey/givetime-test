@@ -41,7 +41,7 @@ class GenericEventFeedPage extends Component {
                         key={event.name}
                         name={event.name}
                         synopsis={event.synopsis}
-                        //ingredients={recipe.ingredients}
+                        date={event.date}
                       />
                     );
                   })}

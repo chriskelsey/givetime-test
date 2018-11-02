@@ -7,6 +7,12 @@ mongoose.connect(
 
 const eventSeed = [
   {
+    name: "Puppy Car Wash",
+    synopsis: "Wash Cars, Pet puppies, help charity, what more do you want?",
+    date: new Date('November 17, 2018'),
+    cityAddress: "2926 16th St. San Francisco CA 94103"
+  },
+  {
     name: "Light in the Grove",
     synopsis:
       "Held on the eve of World AIDS Day, guests experience a moving candlelight reflection at the Circle of Friends then walk through our spectacularly-illuminated Redwood Grove to a warmly-lit banquet tent.",

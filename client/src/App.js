@@ -6,6 +6,7 @@ import CharityMissionHero from './components/SignInPage/CharityMissionHero/Chari
 import SignInHero from './components/SignInPage/SignInHero/SignInHero';
 import FullScreenHero from './components/FullScreenHero';
 import EventFeedPage from './components/Feed';
+import EEventFeedPage from './components/Feed/EEventFeedPage';
 import GenericEventFeedPage from './components/Feed/GenericEventFeedPage';
 import CharityEvent from './components/SignInPage/CharityEventPage';
 import EventSignUp from './components/Feed/EventSignUp';
@@ -44,6 +45,7 @@ class App extends Component {
             {/* <Route exact path="/charitymissionform" component={CharityMissionHero} /> */}
             <Route  exact path="/eventfeed" component={EventFeedPage} />
             <Route  exact path="/anoneventfeed" component={GenericEventFeedPage} />
+            <Route  exact path="/eeventfeed" component={EEventFeedPage} />
             <Route  exact path="/charityevent" component={CharityEvent} />
             {/* <Route  exact path="/interests" component={InterestSelectionHero} /> */}
             <Route  exact path="/eventsignup" component={EventSignUp} />

@@ -48,7 +48,7 @@ class ThankYou extends Component {
             
             <div className = "text-center">
 
-                <Link to ="/eventfeed" style ={{marginLeft: "90px"}}  className="button radius">See more events</Link>
+                <Link to ="/eeventfeed" style ={{marginLeft: "90px"}}  className="button radius">See more events</Link>
 
             </div>
         </div>

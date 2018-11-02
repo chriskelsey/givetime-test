@@ -49,6 +49,7 @@ class EventFeedPage extends Component {
             <h2>Event Feed</h2>
             <FeedList>
             {this.state.events.map( event => {
+                if(event.name != "Puppy Car Wash"){
                     return (
                       <FeedListItem
                         key={event.name}
@@ -57,9 +58,17 @@ class EventFeedPage extends Component {
                         date={event.date}
                       />
                     );
-                  })}
+                }
+            })}
             </FeedList>
         </div>
+        </div>
+        
+        <div>
+         <MyEvent
+            state={this.state.show}
+            
+            />
         </div>
         
         <Footer /> 

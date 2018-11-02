@@ -43,10 +43,10 @@ const LeftSlide = () =>
                     }}   
                   ></div>
                   <div className="vn_title">
-                    Event Name<br/>Date and Time
+                    Puppy Car Wash<br/>November 17th 1:00PM
                   </div>
                   <div className="vn_desc">
-                    Event Info and Location
+                    2926 16th St. San Francisco CA 94103
                   
                   </div>
                 </div>
@@ -55,7 +55,7 @@ const LeftSlide = () =>
             </Zoom>
           
             
-            <Zoom duration={1500} delay={1500}>
+            {/*<Zoom duration={1500} delay={1500}>
 
             <div className="vn_item">
               <div className="vn_outer">
@@ -100,7 +100,7 @@ const LeftSlide = () =>
                 </div>
               </div>
             </div>
-          </Zoom>
+          </Zoom>*/}
           
 
             
